@@ -4,7 +4,7 @@ from tqdm.auto import tqdm
 
 
 def flip_y(data, frame_size):
-    '''Flips the y-axis
+    """Flips the y-axis
 
     Parameters
     ----------
@@ -15,7 +15,7 @@ def flip_y(data, frame_size):
     -------
     flipped_data : ndarray, shape (n_time, 2)
 
-    '''
+    """
     new_data = data.copy()
     if data.ndim > 1:
         new_data[:, 1] = frame_size[1] - new_data[:, 1]
@@ -25,7 +25,7 @@ def flip_y(data, frame_size):
 
 
 def convert_to_cm(data, frame_size, cm_to_pixels=1.0):
-    '''Converts from pixels to cm and flips the y-axis.
+    """Converts from pixels to cm and flips the y-axis.
 
     Parameters
     ----------
@@ -37,12 +37,12 @@ def convert_to_cm(data, frame_size, cm_to_pixels=1.0):
     -------
     converted_data : ndarray, shape (n_time, 2)
 
-    '''
+    """
     return flip_y(data, frame_size) * cm_to_pixels
 
 
 def convert_to_pixels(data, frame_size, cm_to_pixels=1.0):
-    '''Converts from cm to pixels and flips the y-axis.
+    """Converts from cm to pixels and flips the y-axis.
 
     Parameters
     ----------
@@ -54,7 +54,7 @@ def convert_to_pixels(data, frame_size, cm_to_pixels=1.0):
     -------
     converted_data : ndarray, shape (n_time, 2)
 
-    '''
+    """
     return flip_y(data / cm_to_pixels, frame_size)
 
 

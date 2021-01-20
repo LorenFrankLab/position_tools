@@ -83,7 +83,7 @@ def interpolate_nan(position, time=None):
 
 
 def gaussian_smooth(data, sigma, sampling_frequency, axis=0, truncate=8):
-    '''1D convolution of the data with a Gaussian.
+    """1D convolution of the data with a Gaussian.
 
     The standard deviation of the gaussian is in the units of the sampling
     frequency. The function is just a wrapper around scipy's
@@ -102,7 +102,7 @@ def gaussian_smooth(data, sigma, sampling_frequency, axis=0, truncate=8):
     -------
     smoothed_data : array_like
 
-    '''
+    """
     return gaussian_filter1d(
         data, sigma * sampling_frequency, truncate=truncate, axis=axis,
         mode='constant')
