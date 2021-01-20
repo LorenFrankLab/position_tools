@@ -1,4 +1,4 @@
-name: package_template
+name: position_tools
 channels:
 - defaults
 - conda-forge
