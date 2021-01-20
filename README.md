@@ -1,5 +1,5 @@
 # position_tools
-Add package description
+Tools for calculating smoothed 2D position, speed, head direction
 
 ### Installation
 ```bash
