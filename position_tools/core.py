@@ -3,7 +3,7 @@ from scipy import interpolate
 from scipy.ndimage import gaussian_filter1d
 
 
-def get_centriod(position1, position2):
+def get_centroid(position1, position2):
     """Finds the midpoint of two positions.
 
     Parameters
