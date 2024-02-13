@@ -1,7 +1,7 @@
 import numpy as np
 from scipy import interpolate
 from scipy.ndimage import gaussian_filter1d
-
+import warnings
 
 def get_centroid(position1, position2):
     """Finds the midpoint of two positions.
@@ -16,8 +16,10 @@ def get_centroid(position1, position2):
 
     """
     if np.all(position1 == 0):
+        warnings.warn("position1 is all zeros, returning position2 as centroid")
         return position2
     if np.all(position2 == 0):
+        warnings.warn("position2 is all zeros, returning position1 as centroid")
         return position1
     return (position1 + position2) / 2
 
