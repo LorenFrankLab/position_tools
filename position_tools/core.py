@@ -15,6 +15,10 @@ def get_centroid(position1, position2):
     centroid_position : np.ndarray, shape (n_time, 2)
 
     """
+    if np.all(position1 == 0):
+        return position2
+    if np.all(position2 == 0):
+        return position1
     return (position1 + position2) / 2
 
 
