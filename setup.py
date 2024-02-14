@@ -7,7 +7,7 @@ TESTS_REQUIRE = ["pytest >= 2.7.1"]
 
 setup(
     name="position_tools",
-    version="0.2.1",
+    version="0.2.2",
     license="MIT",
     description=(""),
     author="",
