@@ -67,8 +67,12 @@ def make_video(
     cm_to_pixels=1.0,
     disable_progressbar=False,
 ):
-
-    import cv2
+    try:
+        import cv2
+    except ImportError:
+        raise ImportError(
+            "The function `make_video` requires the package `opencv-python`."
+        )
 
     RGB_PINK = (234, 82, 111)
     RGB_YELLOW = (253, 231, 76)
